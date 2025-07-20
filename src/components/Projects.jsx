@@ -9,6 +9,11 @@ import {
 } from "react-icons/si";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 const techIconMap = {
   "MERN Stack": (
     <div className="flex gap-1 items-center">
@@ -47,8 +52,16 @@ function Projects() {
       description:
         "Pixel-perfect UI of Twitter with modern feed, sidebar, and profile layout — built using React and Tailwind CSS.",
       technologies: ["React JS", "Tailwind CSS"],
-      image: "/twitterclone.jpg",
+      image: "twitterclone.jpg",
       link: "https://twitter-clone-ten-peach-69.vercel.app/",
+    },
+    {
+      title: "ThinkBoard - Whiteboard App",
+      description:
+        "Collaborative whiteboard built with MERN stack. Users can draw, type, and interact in real-time. Great for planning and visual thinking.",
+      technologies: ["MERN Stack", "Socket.IO", "Tailwind CSS"],
+      image: "ThinkBoard.jpg",
+      link: "https://mern-thinkboard-ql79.onrender.com/",
     },
   ];
 
@@ -62,57 +75,68 @@ function Projects() {
           Projects
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          navigation
+          autoplay={{ delay: 5000 }}
+          loop
+          spaceBetween={20}
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-[#161b22] border border-white/10 rounded-xl p-5 shadow-md hover:shadow-pink-500/20 transition duration-300 hover:scale-[1.03] flex flex-col"
-            >
-              {/* Project Screenshot */}
-              <div className="w-full h-40 bg-[#1f2937] rounded-md overflow-hidden mb-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
+            <SwiperSlide key={index} className="h-full">
+              <div className="bg-[#161b22] border border-white/10 rounded-xl p-5 shadow-md hover:shadow-pink-500/20 transition duration-300 hover:scale-[1.03] flex flex-col min-h-[700px]">
+                {/* Image */}
+                <div className="w-full h-40 bg-[#1f2937] rounded-md overflow-hidden mb-4">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
 
-              {/* Project Title */}
-              <h3 className="text-xl font-semibold text-[#C4B5FD] mb-2">
-                {project.title}
-              </h3>
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-[#C4B5FD] mb-2">
+                  {project.title}
+                </h3>
 
-              {/* Description */}
-              <p className="text-[#E4E6EB] text-sm mb-4 leading-relaxed">
-                {project.description}
-              </p>
+                {/* Description */}
+                <p className="text-[#E4E6EB] text-sm mb-4 leading-relaxed flex-grow">
+                  {project.description}
+                </p>
 
-              {/* Technologies with Icons */}
-              <div className="flex flex-wrap gap-3 items-center mb-3">
-                {project.technologies.map((tech, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-1 px-3 py-1 text-xs rounded-full bg-[#2a2f3a] shadow-sm text-white"
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-3 items-center mb-3">
+                  {project.technologies.map((tech, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-1 px-3 py-1 text-xs rounded-full bg-[#2a2f3a] shadow-sm text-white"
+                    >
+                      {techIconMap[tech]}
+                      <span>{tech}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Button */}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-purple-400 text-sm font-medium mt-auto inline-flex items-center gap-1"
                   >
-                    {techIconMap[tech]}
-                    <span>{tech}</span>
-                  </div>
-                ))}
+                    Visit Site <FaExternalLinkAlt className="text-xs" />
+                  </a>
+                )}
               </div>
-
-              {/* Visit Site Button */}
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="text-blue-400 hover:text-purple-400 text-sm font-medium mt-auto inline-flex items-center gap-1"
-                >
-                  Visit Site <FaExternalLinkAlt className="text-xs" />
-                </a>
-              )}
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
