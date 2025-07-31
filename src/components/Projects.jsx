@@ -196,7 +196,7 @@ function Projects() {
     {
       title: "LinkedIn Clone",
       description:
-        "LinkedIn-inspired platform with profiles, posts, comments, real-time notifications. Styled using Tailwind CSS.",
+       "LinkedIn-inspired platform featuring user authentication, profile creation, post publishing with like and comment support, and connection requests between users. Styled with responsive UI using Tailwind CSS.",
       technologies: ["MERN Stack", "Tailwind CSS"],
       image: "linkedinclone.jpg",
       link: "https://linkedin-clone-p9ax.onrender.com/",
