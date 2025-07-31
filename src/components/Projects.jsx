@@ -210,7 +210,7 @@ function Projects() {
       link: "https://twitter-clone-ten-peach-69.vercel.app/",
     },
     {
-      title: "ThinkBoard - Whiteboard App",
+      title: "ThinkBoard Notes App",
       description:
         "Collaborative whiteboard built with MERN stack. Users can draw, type, and interact in real-time. Great for planning and visual thinking.",
       technologies: ["MERN Stack", "Socket.IO", "Tailwind CSS"],
