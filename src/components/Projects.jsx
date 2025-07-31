@@ -251,7 +251,7 @@ function Projects() {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index} className="h-full">
-              <div className="bg-[#161b22] border border-white/10 rounded-xl p-5 shadow-md hover:shadow-pink-500/20 transition duration-300 hover:scale-[1.03] flex flex-col min-h-[700px]">
+              <div className="bg-[#161b22] border border-white/10 rounded-xl p-5 shadow-md hover:shadow-pink-500/20 transition duration-300 hover:scale-[1.03] flex flex-col min-h-[800px]">
                 {/* Image */}
                 <div className="w-full h-40 bg-[#1f2937] rounded-md overflow-hidden mb-4">
                   <img
