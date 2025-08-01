@@ -31,8 +31,7 @@
 
 // export default App;
 
-
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState, useEffect } from "react";
 import { FaSpinner } from "react-icons/fa";
 
 // Lazy-loaded components
@@ -46,44 +45,59 @@ const Certificates = lazy(() => import("./components/Certificates.jsx"));
 const Contact = lazy(() => import("./components/Contact.jsx"));
 const Footer = lazy(() => import("./components/Footer.jsx"));
 
+// Fake loading screen
 function LoadingScreen() {
   const tips = [
-    "💡 Tip: Keep your components small and reusable.",
-    "💻 Tip: Use lazy loading to improve performance — oh wait 😉",
-    "🚀 Tip: Clean code is better than clever code.",
-    "📦 Tip: Always version your API responses.",
-    "🧠 Tip: Thinking twice before coding saves debugging thrice.",
+    "💡 Tip: Refactor often, commit early.",
+    "🛠️ Tip: Avoid over-engineering.",
+    "🚀 Tip: Ship first, optimize later.",
+    "🧪 Tip: Write tests that matter.",
+    "⚡ Tip: UI/UX is half the product."
   ];
-  const randomTip = tips[Math.floor(Math.random() * tips.length)];
+  const tip = tips[Math.floor(Math.random() * tips.length)];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen px-4 text-center bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100 text-center px-4">
       <img
-        src="https://illustrations.popsy.co/blue/programming.svg"
+        src="https://illustrations.popsy.co/blue/developer.svg"
         alt="Loading illustration"
         className="w-60 mb-6 animate-fade-in"
       />
-      <FaSpinner className="animate-spin text-5xl text-indigo-600 mb-4" />
-      <p className="text-xl font-semibold text-gray-700 mb-2">Loading Awesomeness...</p>
-      <p className="text-md text-gray-500 italic">{randomTip}</p>
+      <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" />
+      <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
+      <p className="text-md text-gray-500 italic mt-2">{tip}</p>
     </div>
   );
+}
+
+// Ensures content waits at least 3s before showing
+function DelayedRenderer({ children, delay = 3000 }) {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setShow(true), delay);
+    return () => clearTimeout(timeout);
+  }, [delay]);
+
+  return show ? children : <LoadingScreen />;
 }
 
 function App() {
   return (
     <div className="min-h-screen">
-      <Suspense fallback={<LoadingScreen />}>
-        <Navbar />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Education />
-        <Certificates />
-        <Contact />
-        <Footer />
-      </Suspense>
+      <DelayedRenderer>
+        <Suspense fallback={<LoadingScreen />}>
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Education />
+          <Certificates />
+          <Contact />
+          <Footer />
+        </Suspense>
+      </DelayedRenderer>
     </div>
   );
 }
