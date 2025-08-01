@@ -24,7 +24,7 @@ function Hero() {
             Om Patel
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-[#C5C7D0] leading-relaxed tracking-wide max-w-xl mx-auto md:mx-0 animate-fade-in">
+          <p className="text-base sm:text-lg md:text-xl text-gray-900 leading-relaxed tracking-wide max-w-xl mx-auto md:mx-0 animate-fade-in">
             I build modern, scalable web apps — blending elegant UI with
             powerful backend logic.
           </p>
