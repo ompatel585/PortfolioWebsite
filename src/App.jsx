@@ -30,11 +30,9 @@
 // }
 
 // export default App;
-
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import { FaSpinner } from "react-icons/fa";
 
-// Lazy-loaded components
 const Navbar = lazy(() => import("./components/Navbar.jsx"));
 const Hero = lazy(() => import("./components/Hero.jsx"));
 const About = lazy(() => import("./components/About.jsx"));
@@ -45,35 +43,32 @@ const Certificates = lazy(() => import("./components/Certificates.jsx"));
 const Contact = lazy(() => import("./components/Contact.jsx"));
 const Footer = lazy(() => import("./components/Footer.jsx"));
 
-// Fake loading screen
-function LoadingScreen() {
-  const tips = [
-    "💡 Tip: Refactor often, commit early.",
-    "🛠️ Tip: Avoid over-engineering.",
-    "🚀 Tip: Ship first, optimize later.",
-    "🧪 Tip: Write tests that matter.",
-    "⚡ Tip: UI/UX is half the product."
-  ];
-  const tip = tips[Math.floor(Math.random() * tips.length)];
+const tips = [
+  "💡 Tip: Refactor often, commit early.",
+  "🛠️ Tip: Avoid over-engineering.",
+  "🚀 Tip: Ship first, optimize later.",
+  "🧪 Tip: Write tests that matter.",
+  "⚡ Tip: UI/UX is half the product."
+];
 
+function LoadingScreen() {
+  const tip = tips[Math.floor(Math.random() * tips.length)];
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100 text-center px-4">
+    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-indigo-500/30 to-purple-600/30 text-white backdrop-blur-xl px-4 animate-fade-in">
       <img
         src="https://undraw.dev_productivity_re_fylf.svg"
-        alt="Loading illustration"
-        className="w-60 mb-6 animate-fade-in"
+        alt="Loading..."
+        className="w-52 mb-6 animate-bounce"
         loading="eager"
       />
-      <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" />
-      <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
-      <p className="text-md text-gray-500 italic mt-2">{tip}</p>
+      <FaSpinner className="animate-spin text-3xl text-white mb-3" />
+      <p className="text-lg font-semibold">Loading your portfolio...</p>
+      <p className="text-sm opacity-80 mt-1 italic">{tip}</p>
     </div>
   );
 }
 
-
-// Ensures content waits at least 3s before showing
-function DelayedRenderer({ children, delay = 3000 }) {
+function DelayedRenderer({ children, delay = 2000 }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -81,12 +76,16 @@ function DelayedRenderer({ children, delay = 3000 }) {
     return () => clearTimeout(timeout);
   }, [delay]);
 
-  return show ? children : <LoadingScreen />;
+  return (
+    <div className={`transition-opacity duration-1000 ${show ? "opacity-100" : "opacity-0"}`}>
+      {show ? children : <LoadingScreen />}
+    </div>
+  );
 }
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-['Poppins'] bg-[#0d1117] text-white">
       <DelayedRenderer>
         <Suspense fallback={<LoadingScreen />}>
           <Navbar />
