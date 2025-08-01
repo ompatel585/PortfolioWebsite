@@ -222,7 +222,7 @@ function Projects() {
       description:
         "Full-featured e-commerce site with product listing, cart, checkout, secure payments using PayPal, state management via Redux, and elegant UI built using shadcn/ui and Tailwind.",
       technologies: ["MERN Stack", "Redux", "PayPal", "shadcn/ui"],
-      image: "ecommerce.jpg", // make sure this image is available in your public/assets folder
+      image: "ecommerce.png", // make sure this image is available in your public/assets folder
       link: "https://e-commerce-plateform.onrender.com/",
     },
   ];
