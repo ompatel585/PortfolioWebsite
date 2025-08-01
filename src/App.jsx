@@ -1,4 +1,3 @@
-
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import { FaSpinner } from "react-icons/fa";
 
@@ -32,11 +31,10 @@ function LoadingScreen() {
         className="w-60 mb-6 animate-fade-in"
         loading="eager"
       />
-{/*       <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" /> */}
-      
-
-      
-
+      <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" />
+      <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
+      <p className="text-md text-gray-500 italic mt-2">{tip}</p>
+    </div>
   );
 }
 
@@ -74,4 +72,3 @@ function App() {
 }
 
 export default App;
-
