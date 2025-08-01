@@ -32,7 +32,13 @@ function LoadingScreen() {
         className="w-60 mb-6 animate-fade-in"
         loading="eager"
       />
-      <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" />
+{/*       <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" /> */}
+      <div className="flex space-x-2 mb-4">
+  <div className="w-3 h-3 bg-indigo-500 rounded-full animate-bounce" style={{ animationDelay: "0s" }}></div>
+  <div className="w-3 h-3 bg-indigo-500 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
+  <div className="w-3 h-3 bg-indigo-500 rounded-full animate-bounce" style={{ animationDelay: "0.4s" }}></div>
+</div>
+
       <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
       <p className="text-md text-gray-500 italic mt-2">{tip}</p>
     </div>
