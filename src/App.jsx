@@ -32,7 +32,6 @@
 // export default App;
 
 
-
 import React, { Suspense, lazy } from "react";
 import { FaSpinner } from "react-icons/fa";
 
@@ -47,11 +46,26 @@ const Certificates = lazy(() => import("./components/Certificates.jsx"));
 const Contact = lazy(() => import("./components/Contact.jsx"));
 const Footer = lazy(() => import("./components/Footer.jsx"));
 
-function LoadingSpinner() {
+function LoadingScreen() {
+  const tips = [
+    "💡 Tip: Keep your components small and reusable.",
+    "💻 Tip: Use lazy loading to improve performance — oh wait 😉",
+    "🚀 Tip: Clean code is better than clever code.",
+    "📦 Tip: Always version your API responses.",
+    "🧠 Tip: Thinking twice before coding saves debugging thrice.",
+  ];
+  const randomTip = tips[Math.floor(Math.random() * tips.length)];
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-4">
-      <FaSpinner className="animate-spin text-4xl text-blue-600" />
-      <p className="text-lg font-medium text-gray-600">Loading components...</p>
+    <div className="flex flex-col items-center justify-center h-screen px-4 text-center bg-gradient-to-br from-blue-50 to-indigo-100">
+      <img
+        src="https://illustrations.popsy.co/blue/programming.svg"
+        alt="Loading illustration"
+        className="w-60 mb-6 animate-fade-in"
+      />
+      <FaSpinner className="animate-spin text-5xl text-indigo-600 mb-4" />
+      <p className="text-xl font-semibold text-gray-700 mb-2">Loading Awesomeness...</p>
+      <p className="text-md text-gray-500 italic">{randomTip}</p>
     </div>
   );
 }
@@ -59,7 +73,7 @@ function LoadingSpinner() {
 function App() {
   return (
     <div className="min-h-screen">
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<LoadingScreen />}>
         <Navbar />
         <Hero />
         <About />
