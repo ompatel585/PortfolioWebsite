@@ -31,7 +31,12 @@ function LoadingScreen() {
         className="w-60 mb-6 animate-fade-in"
         loading="eager"
       />
-      <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" />
+{/*       <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" /> */}
+      <div className="relative w-12 h-12 mb-5">
+  <div className="absolute inset-0 rounded-full border-t-4 border-b-4 border-indigo-500 animate-spin"></div>
+  <div className="absolute inset-1 rounded-full border-t-4 border-b-4 border-indigo-200 animate-spin opacity-50"></div>
+</div>
+
       <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
       <p className="text-md text-gray-500 italic mt-2">{tip}</p>
     </div>
