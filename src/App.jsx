@@ -37,6 +37,14 @@ function LoadingScreen() {
   <div className="w-3 h-3 bg-indigo-500 rounded-full animate-bounce" style={{ animationDelay: "0s" }}></div>
   <div className="w-3 h-3 bg-indigo-500 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
   <div className="w-3 h-3 bg-indigo-500 rounded-full animate-bounce" style={{ animationDelay: "0.4s" }}></div>
+
+        <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+
+        <div className="relative w-6 h-6 mb-4">
+  <div className="absolute w-full h-full border-2 border-indigo-400 animate-spin rounded-sm"></div>
+</div>
+
+        
 </div>
 
       <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
