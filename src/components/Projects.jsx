@@ -162,7 +162,24 @@
 // export default Projects;
 
 // Your imports stay the same...
+import {
+  SiMongodb,
+  SiExpress,
+  SiReact,
+  SiNodedotjs,
+  SiSocketdotio,
+  SiTailwindcss,
+  SiJsonwebtokens,
+  SiRedux,
+  SiPaypal,
+} from "react-icons/si";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { BsBoundingBoxCircles } from "react-icons/bs";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 function Projects() {
   const projects = [
     {
