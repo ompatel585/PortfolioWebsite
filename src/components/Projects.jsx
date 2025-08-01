@@ -88,6 +88,9 @@ function Projects() {
       className="py-24 bg-[#0d1117] text-white font-['Poppins']"
     >
       <div className="max-w-7xl mx-auto px-6">
+{/*         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Projects
+        </h2> */}
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Projects
         </h2>
