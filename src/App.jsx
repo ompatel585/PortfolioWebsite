@@ -56,11 +56,7 @@ function LoadingScreen() {
       
 
         
-</div>
 
-      <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
-      <p className="text-md text-gray-500 italic mt-2">{tip}</p>
-    </div>
   );
 }
 
