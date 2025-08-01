@@ -59,9 +59,10 @@ function LoadingScreen() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100 text-center px-4">
       <img
-        src="https://illustrations.popsy.co/blue/developer.svg"
+        src="https://undraw.dev_productivity_re_fylf.svg"
         alt="Loading illustration"
         className="w-60 mb-6 animate-fade-in"
+        loading="eager"
       />
       <FaSpinner className="animate-spin text-4xl text-indigo-600 mb-3" />
       <p className="text-xl font-semibold text-gray-700">Preparing something awesome...</p>
@@ -69,6 +70,7 @@ function LoadingScreen() {
     </div>
   );
 }
+
 
 // Ensures content waits at least 3s before showing
 function DelayedRenderer({ children, delay = 3000 }) {
