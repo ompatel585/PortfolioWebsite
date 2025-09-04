@@ -127,7 +127,7 @@ function Projects() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#E4E6EB] text-sm mb-4 leading-relaxed flex-grow max-h-24 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+                <p className="text-[#E4E6EB] text-sm mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
 
