@@ -40,46 +40,87 @@ const techIconMap = {
 
 function Projects() {
   const projects = [
+    // {
+    //   title: "Chat Website",
+    //   description:
+    //     "Real-time chat app like WhatsApp with image sharing, online status, secure auth (JWT), and Socket.IO powered communication.",
+    //   technologies: ["MERN Stack", "Socket.IO", "JWT"],
+    //   image: "chatappclone.jpg",
+    //   link: "https://fullstack-chat-app-538s.onrender.com",
+    // },
+    // {
+    //   title: "LinkedIn Clone",
+    //   description:
+    //    "LinkedIn-inspired platform featuring user authentication, profile creation, post publishing with like and comment support, and connection requests between users. Styled with responsive UI using Tailwind CSS.",
+    //   technologies: ["MERN Stack", "Tailwind CSS"],
+    //   image: "linkedinclone.jpg",
+    //   link: "https://linkedin-clone-p9ax.onrender.com/",
+    // },
+    // {
+    //   title: "Twitter Clone",
+    //   description:
+    //     "Pixel-perfect UI of Twitter with modern feed, sidebar, and profile layout — built using React and Tailwind CSS.",
+    //   technologies: ["React JS", "Tailwind CSS"],
+    //   image: "twitterclone.jpg",
+    //   link: "https://twitter-clone-ten-peach-69.vercel.app/",
+    // },
+    // {
+    //   title: "ThinkBoard Notes App",
+    //   description:
+    //     "Collaborative whiteboard built with MERN stack. Users can draw, type, and interact in real-time. Great for planning and visual thinking.",
+    //   technologies: ["MERN Stack", "Socket.IO", "Tailwind CSS"],
+    //   image: "ThinkBoard.jpg",
+    //   link: "https://mern-thinkboard-ql79.onrender.com/",
+    // },
+    // {
+    //   title: "E-Commerce Platform",
+    //   description:
+    //     "Full-featured e-commerce site with product listing, cart, checkout, secure payments using PayPal, state management via Redux, and elegant UI built using shadcn/ui and Tailwind.",
+    //   technologies: ["MERN Stack", "Redux", "PayPal", "shadcn/ui"],
+    //   image: "ecommerce.png", // make sure this image is available in your public/assets folder
+    //   link: "https://e-commerce-plateform.onrender.com/",
+    // },
     {
-      title: "Chat Website",
-      description:
-        "Real-time chat app like WhatsApp with image sharing, online status, secure auth (JWT), and Socket.IO powered communication.",
-      technologies: ["MERN Stack", "Socket.IO", "JWT"],
-      image: "chatappclone.jpg",
-      link: "https://fullstack-chat-app-538s.onrender.com",
-    },
-    {
-      title: "LinkedIn Clone",
-      description:
-       "LinkedIn-inspired platform featuring user authentication, profile creation, post publishing with like and comment support, and connection requests between users. Styled with responsive UI using Tailwind CSS.",
-      technologies: ["MERN Stack", "Tailwind CSS"],
-      image: "linkedinclone.jpg",
-      link: "https://linkedin-clone-p9ax.onrender.com/",
-    },
-    {
-      title: "Twitter Clone",
-      description:
-        "Pixel-perfect UI of Twitter with modern feed, sidebar, and profile layout — built using React and Tailwind CSS.",
-      technologies: ["React JS", "Tailwind CSS"],
-      image: "twitterclone.jpg",
-      link: "https://twitter-clone-ten-peach-69.vercel.app/",
-    },
-    {
-      title: "ThinkBoard Notes App",
-      description:
-        "Collaborative whiteboard built with MERN stack. Users can draw, type, and interact in real-time. Great for planning and visual thinking.",
-      technologies: ["MERN Stack", "Socket.IO", "Tailwind CSS"],
-      image: "ThinkBoard.jpg",
-      link: "https://mern-thinkboard-ql79.onrender.com/",
-    },
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Full-featured e-commerce site with product listing, cart, checkout, secure payments using PayPal, state management via Redux, and elegant UI built using shadcn/ui and Tailwind.",
-      technologies: ["MERN Stack", "Redux", "PayPal", "shadcn/ui"],
-      image: "ecommerce.png", // make sure this image is available in your public/assets folder
-      link: "https://e-commerce-plateform.onrender.com/",
-    },
+  title: "Chat Website",
+  description:
+    "Real-time chat app like WhatsApp with image sharing, online status, secure auth (JWT), and Socket.IO powered communication. Real-time chat app like WhatsApp with image sharing, online status, secure auth (JWT), and Socket.IO powered communication.",
+  technologies: ["MERN Stack", "Socket.IO", "JWT"],
+  image: "chatappclone.jpg",
+  link: "https://fullstack-chat-app-538s.onrender.com",
+},
+{
+  title: "LinkedIn Clone",
+  description:
+    "LinkedIn-inspired platform featuring user authentication, profile creation, post publishing with like and comment support, and connection requests between users. Styled with responsive UI using Tailwind CSS. LinkedIn-inspired platform featuring user authentication, profile creation, post publishing with like and comment support, and connection requests between users. Styled with responsive UI using Tailwind CSS.",
+  technologies: ["MERN Stack", "Tailwind CSS"],
+  image: "linkedinclone.jpg",
+  link: "https://linkedin-clone-p9ax.onrender.com/",
+},
+{
+  title: "Twitter Clone",
+  description:
+    "Pixel-perfect UI of Twitter with modern feed, sidebar, and profile layout — built using React and Tailwind CSS. Pixel-perfect UI of Twitter with modern feed, sidebar, and profile layout — built using React and Tailwind CSS.",
+  technologies: ["React JS", "Tailwind CSS"],
+  image: "twitterclone.jpg",
+  link: "https://twitter-clone-ten-peach-69.vercel.app/",
+},
+{
+  title: "ThinkBoard Notes App",
+  description:
+    "Collaborative whiteboard built with MERN stack. Users can draw, type, and interact in real-time. Great for planning and visual thinking. Collaborative whiteboard built with MERN stack. Users can draw, type, and interact in real-time. Great for planning and visual thinking.",
+  technologies: ["MERN Stack", "Socket.IO", "Tailwind CSS"],
+  image: "ThinkBoard.jpg",
+  link: "https://mern-thinkboard-ql79.onrender.com/",
+},
+{
+  title: "E-Commerce Platform",
+  description:
+    "Full-featured e-commerce site with product listing, cart, checkout, secure payments using PayPal, state management via Redux, and elegant UI built using shadcn/ui and Tailwind. Full-featured e-commerce site with product listing, cart, checkout, secure payments using PayPal, state management via Redux, and elegant UI built using shadcn/ui and Tailwind.",
+  technologies: ["MERN Stack", "Redux", "PayPal", "shadcn/ui"],
+  image: "ecommerce.png",
+  link: "https://e-commerce-plateform.onrender.com/",
+},
+
   ];
 
   return (
