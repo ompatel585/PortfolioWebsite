@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from "react";
+import CompProj from "./components/CompProj.jsx";
 
 // Lazy-loaded components
 const Navbar = lazy(() => import("./components/Navbar.jsx"));
@@ -20,6 +21,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <CompProj />
         <Education />
         <Certificates />
         <Contact />
