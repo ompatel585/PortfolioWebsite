@@ -84,7 +84,7 @@ function Projects() {
         <Swiper
           modules={[Navigation, Autoplay]}
           navigation
-          autoplay={{ delay: 5000 }}
+          autoplay={{ delay: 50000 }}
           loop
           spaceBetween={30}
           breakpoints={{
