@@ -6,7 +6,7 @@ function Footer() {
   const month = currentDate.toLocaleString("default", { month: "long" });
 
   return (
-    <footer className="w-full bg-[#0d1117] text-center font-['Poppins'] border-t border-white/10 py-6 fixed bottom-0 left-0 z-50">
+    <footer className="w-full bg-[#0d1117] text-center font-['Poppins'] border-t border-white/10 py-6 relative">
       <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 gap-4">
         <p className="text-[#E4E6EB] text-sm tracking-wide">
           &copy; {year} {month}{" "}
