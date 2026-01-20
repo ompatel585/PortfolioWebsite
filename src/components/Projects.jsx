@@ -98,7 +98,7 @@ function Projects() {
               <div
                 className="bg-[#0b1120] border border-white/10 rounded-2xl p-6 shadow-xl 
 hover:shadow-pink-500/30 transition-all duration-300 hover:-translate-y-2 
-flex flex-col h-[750px]"
+flex flex-col h-[550px]"
               >
                 {/* Image */}
                 <div className="w-full h-48 rounded-lg overflow-hidden mb-4">
